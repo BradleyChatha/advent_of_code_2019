@@ -101,46 +101,46 @@ const INPUT = `80891
 
 void main()
 {
-	partOne();
-	partTwo();
+    partOne();
+    partTwo();
 }
 
 void partOne()
 {
-	import std.algorithm : splitter, map, reduce;
-	import std.stdio     : writeln;
-	import std.conv      : to;
-	
-	writeln(INPUT.splitter
-				 .map!(s => (s.to!int / 3) - 2)
-				 .reduce!((n1, n2) => n1 + n2)
-	);
+    import std.algorithm : splitter, map, reduce;
+    import std.stdio     : writeln;
+    import std.conv      : to;
+    
+    writeln(INPUT.splitter
+                 .map!(s => (s.to!int / 3) - 2)
+                 .reduce!((n1, n2) => n1 + n2)
+    );
 }
 
 void partTwo()
 {
-	import std.algorithm : splitter, map, reduce;
-	import std.stdio     : writeln;
-	import std.conv      : to;
-	
-	writeln(INPUT.splitter
-			     .map!(s => getFuel(s.to!int()))
-				 .reduce!((n1, n2) => n1 + n2)
-	);
+    import std.algorithm : splitter, map, reduce;
+    import std.stdio     : writeln;
+    import std.conv      : to;
+    
+    writeln(INPUT.splitter
+                 .map!(s => getFuel(s.to!int()))
+                 .reduce!((n1, n2) => n1 + n2)
+    );
 }
 
 int getFuel(int input)
 {
-	int fuel;
-	
-	while(true)
-	{
-		input = (input / 3) - 2;
-		if(input <= 0)
-			break;
-			
-		fuel += input;
-	}
-	
-	return fuel;
+    int fuel;
+    
+    while(true)
+    {
+        input = (input / 3) - 2;
+        if(input <= 0)
+            break;
+            
+        fuel += input;
+    }
+    
+    return fuel;
 }
