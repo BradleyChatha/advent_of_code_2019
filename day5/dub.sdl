@@ -1,0 +1,5 @@
+name "day5"
+description "A minimal D application."
+authors "Sealab"
+copyright "Copyright © 2019, Sealab"
+license "proprietary"
